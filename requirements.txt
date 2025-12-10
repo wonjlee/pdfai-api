@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+
+pymupdf
+pdfplumber
+
+openai
+
+sqlalchemy
+alembic
+
+stripe
+boto3
+
+httpx
