@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.routers import health, invoice, table, ocr
 
 app = FastAPI(
     title="PDF AI API",
@@ -6,6 +7,7 @@ app = FastAPI(
     version="0.1.0"
 )
 
-@app.get("/health")
-def health_check():
-    return {"status": "ok", "message": "PDF AI API server is running"}
+app.include_router(health.router)
+app.include_router(invoice.router)
+app.include_router(table.router)
+app.include_router(ocr.router)
